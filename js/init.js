@@ -20,6 +20,17 @@ document.addEventListener('DOMContentLoaded', function() {
 $(document).ready(function(){
   $('.modal').modal();
 });
+
+// $(document).ready(function () {
+//   //MAKE SURE YOU CALL .leanModal METHOD THIS WAY.
+//   //ELSE MODAL MAP WILL NOT SHOW PROPERLY.
+//     $('.modal-trigger').leanModal({
+//         ready: function () {
+//             var map2 = document.getElementById("map");
+//             google.maps.event.trigger(map2, 'resize');
+//         }
+//     });
+// });
      
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.datepicker');
@@ -87,3 +98,14 @@ $(document).ready(function () {
   });
 
 })
+
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('select');
+  var instances = M.FormSelect.init(elems, options);
+});
+
+// Or with jQuery
+
+$(document).ready(function(){
+  $('select').formSelect();
+});
