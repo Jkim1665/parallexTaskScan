@@ -10,18 +10,19 @@
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
     <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 40%;
-        width: 40%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
+
+        #map {
+            height: 60%;
+            width: 40%;
+            margin-left: 90px;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
     </style>
     <!-- <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIYLypbzuWg4gxZLmQKjsBJf0i1pAo4dk&callback=initMap"
@@ -33,7 +34,7 @@
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-        
+
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -83,88 +84,9 @@
                 <br>
                 <h1 class="header center white-text text-lighten-2">taskScan</h1>
                 <div class="row center">
-                    <h5 class="header col s12 dark">Use the dropdown below to filter for jobs types that suit you</h5>
+                    <h3 class="header col s12 dark">Select the Job that is right for you by using the Dropdown below
+                    </h3>
                 </div>
-
-                <!-- Modal Structure -->
-                <div id="modal1" class="modal">
-                    <div class="modal-content">
-
-
-                        <h4>Job Forum</h4>
-                        <br>
-
-
-                        <div class="row">
-                            <form class="col s12">
-                                <div class="row">
-                                    <!--  job description-->
-
-                                    <div class="row">
-                                        <div class="input-field col s12">
-
-                                            <label for="formGroupExampleInput2">Job Description</label>
-                                            <div id="jobDescription"></div>
-
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <!-- job category: update this -->
-
-                                <div class="row">
-                                    <div class="input-field col s6">
-                                        <label for="date">Date of Job</label>
-                                        <div id="dateofjob"></div>
-                                    </div>
-
-                                    <!-- at what time?-->
-
-                                    <div class="input-field col s6">
-                                        <label for="date">Time of Job</label>
-                                        <div id="timeofjob"></div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-
-                                </div>
-
-                                <!-- where-->
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <label for="formGroupExampleInput2">Amount To Be Paid</label>
-                                        <div id="job_amount"></div>
-                                    </div>
-                                </div>
-                                <!--  when-->
-
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <label for="formGroupExampleInput2">Job Location</label>
-                                        <div id="job_location"></div>
-                                    </div>
-
-                                </div>
-
-                                        
-                                    
-                            </form>
-                        </div>
-                    </div>
-
-                    <div id="map"></div>
-
-                    <div class="modal-footer">
-                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Disagree</a>
-                    </div>
-                </div>
-                <br>
-                <br>
-
-
-
             </div>
         </div>
         <!--image2-->
@@ -173,7 +95,7 @@
         </div>
     </div>
 
-    
+
 
     <div class="container">
         <div class="section">
@@ -183,7 +105,7 @@
                 <div class="col s12 m12">
 
                     <select id="categorySelect">
-                        <option value="" disabled selected>Choose your option</option>
+                        <option value="" disabled selected>Choose your job Category</option>
                         <option value="1">Maintainence</option>
                         <option value="2">Manual Labor</option>
                         <option value="3">Miscellaneous</option>
@@ -194,7 +116,7 @@
 
                 <div class="row center">
                     <!-- Modal Trigger -->
-                    <button data-target="modal1" class="btn-large modal-trigger ">Find My Job!</button>
+                    <button data-target="modal1" class="btn-large">Find My Job!</button>
                     <br>
                     <br>
                     <br>
@@ -204,13 +126,12 @@
 
     </div>
 
-
-
     <div class="parallax-container valign-wrapper">
         <div class="section no-pad-bot">
             <div class="container">
+
                 <div class="row center">
-                    <h5 class="header col s12 light">Join users all around the world</h5>
+                    <h3>Check the form below for the location of your job on the map!</h3>
                 </div>
             </div>
         </div>
@@ -224,38 +145,14 @@
     <div class="container">
         <div class="section">
             <div class="row">
-                <div class="col s12 center">
-                    <h3>
-                        <i class="mdi-content-send brown-text"></i>
-                    </h3>
-                    <h4>Contact Us, Would love to hear from you!</h4>
-                </div>
-
-                <div class="col-sm-7 slideanim">
-                    <div class="row">
-                        <div class="col-sm-6 form-group">
-                            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-                        </div>
-                        <div class="col-sm-6 form-group">
-                            <input class="form-control" id="email" name="email" placeholder="Email" type="email"
-                                required>
-                        </div>
-                    </div>
-                    <textarea class="form-control" id="comments" name="comments" placeholder="Comment"
-                        rows="5"></textarea>
-                    <br>
-                    <div class="row">
-                        <div class="col-sm-12 form-group">
-                            <button class="btn btn-default pull-right" type="submit">Send</button>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
-
-
         </div>
     </div>
 
+    
+    <div id="map"></div>
+    
 
     <div class="parallax-container valign-wrapper">
         <div class="section no-pad-bot">
@@ -342,7 +239,7 @@
     <script src="js/materialize.js"></script>
     <script src="js/init.js"></script>
 
-    <!-- <script>
+    <script>
         // for google map api
 
         var map, infoWindow;
@@ -385,25 +282,9 @@
         }
 
 
-    </script> -->
-    <script>
-            var map;
-            function initMap() {
-              map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: -34.397, lng: 150.644},
-                zoom: 8
-              });
-            }
-            $(document).ready(function () {
-            $('.modal-trigger').leanModal({
-                ready: function () {
-                    var map = document.getElementById("googleMap");
-                    google.maps.event.trigger(map, 'resize');
-                }
-            });
-          </script>
-          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIYLypbzuWg4gxZLmQKjsBJf0i1pAo4dk&callback=initMap"
-          async defer></script>
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIYLypbzuWg4gxZLmQKjsBJf0i1pAo4dk&callback=initMap"
+        async defer></script>
 </body>
 
 </html>
